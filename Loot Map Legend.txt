@@ -1,0 +1,23 @@
+Legend:
+I. Red dotted lines are guard paths
+II. Black lines are Walls or obstruction
+III. Grey lines on black lines are doorways or entrances
+IV. Diamonds are player spawn points
+V. White areas do not contain loot
+
+
+
+1. House Loot Layout Legend
+
+	A. Green are bedrooms, these can very rarely spawn firearms or car keys for extra money but any sound made will alert the police
+	B. Blue Is Kitchen and dinning room, spawn kitchen items e.g. pots, pans, plates, and rarely, Fine chinaware and Vases
+	C. Yellow is an office, it can spawn laptops, phones, watches, and rarely car keys
+	D. Orange is the garage, it is the player's spawn area so does not spawn loot
+	E. Brown is the Living room area, can spawn vases, and small lamps
+
+2. Office Loot Layout Legend
+
+	A. Green are offices that contain higher value 'office items'
+	B. Blue lines are cubical dividers, these are smaller than walls
+	C. Yellow boxes are desks that contain less overall office loot
+	D. The grey box in the center is a feature/half-wall to block guard vision

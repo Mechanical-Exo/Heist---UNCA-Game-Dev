@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Debt Run Heist Prototype</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="game-wrap" aria-label="Debt Run heist prototype">
+        <canvas id="game"></canvas>
+
+        <div class="topbar">
+          <div class="brand">
+            <span class="mark"></span>
+            <div>
+              <strong>Debt Run</strong>
+              <span id="statusLine">Boss debt: $25,000</span>
+            </div>
+          </div>
+          <div class="meters">
+            <label>
+              <span>Heat</span>
+              <meter id="heatMeter" min="0" max="100" value="0"></meter>
+            </label>
+            <label>
+              <span>Sight</span>
+              <meter id="sightMeter" min="0" max="100" value="0"></meter>
+            </label>
+            <label>
+              <span>Noise</span>
+              <meter id="noiseMeter" min="0" max="100" value="0"></meter>
+            </label>
+          </div>
+        </div>
+
+        <aside class="panel left-panel" id="basePanel">
+          <div class="panel-head">
+            <span>Safehouse</span>
+            <button id="startHeistBtn" class="primary">Start Heist</button>
+          </div>
+          <div class="money-row">
+            <span>Cash</span>
+            <strong id="cashLabel">$0</strong>
+          </div>
+          <div class="money-row">
+            <span>Debt</span>
+            <strong id="debtLabel">$25,000</strong>
+          </div>
+          <button id="payDebtBtn" class="wide">Pay Boss</button>
+          <div class="divider"></div>
+          <h2>Shop</h2>
+          <div id="shopList" class="shop-list"></div>
+          <div class="divider"></div>
+          <h2>Furnish</h2>
+          <div id="furnitureList" class="shop-list compact"></div>
+        </aside>
+
+        <aside class="panel right-panel" id="heistPanel">
+          <div class="panel-head">
+            <span>Take</span>
+            <strong id="bagLabel">$0 / $2,500</strong>
+          </div>
+          <div class="inventory" id="inventoryList"></div>
+          <div class="divider"></div>
+          <div class="tool-grid" id="toolGrid"></div>
+          <div class="divider"></div>
+          <div class="legend">
+            <span><b class="loot-dot"></b> loot</span>
+            <span><b class="guard-dot"></b> guard</span>
+            <span><b class="exit-dot"></b> exit</span>
+          </div>
+        </aside>
+
+        <div class="prompt" id="prompt"></div>
+        <div class="toast" id="toast"></div>
+        <div class="modal hidden" id="modal">
+          <div class="modal-card">
+            <h1 id="modalTitle">Heist Over</h1>
+            <p id="modalText"></p>
+            <button id="modalBtn" class="primary">Back to Base</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>
