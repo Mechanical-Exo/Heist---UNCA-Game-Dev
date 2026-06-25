@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Top-Down 2D Game"
+version = "1.0.0"
+id = "artifacts/top-down-game"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25269
+
+[services.development]
+run = "pnpm --filter @workspace/top-down-game run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/top-down-game", "run", "build" ]
+publicDir = "artifacts/top-down-game/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25269"
+BASE_PATH = "/"
